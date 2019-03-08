@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#p1{
+    position: relative;
+    left: 20px;
+}
+
+#p2{
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background: #BAE498;
+}
+div_p3{
+    height: 200px;
+    width: 200px;
+}
+
+
+#p3{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+}
+
+#float *{
+    width: 120px;
+    height: 120px;
+}
+
+#float1{
+    background: #BAE498;
+    float: left;
+}
+
+#float2{
+    background: #e4549d;
+    width: 120px;
+    height: 120px;
+    clear: left;
+}
+
+#float3{
+    background: #e4e14d;
+    display: inline;
+}
+
+#float4{
+    display: inline;
+}
+
+#float5{
+    display: inline;
+}
+
+#div_img img{
+    width: 100px;
+    height: 120px;
+    float: left;
+}
+
+#div_content{
+    float: left;
+
+}
+
+#div_list{
+    clear: left;
+}
+
+#list li{
+float: left;
+    list-style: none;
+}
+
+#list li a{
+    display: inline-block;
+    text-decoration:none;
+    width: 120px;
+    height: 60px;
+    background: #CDFEAA;
+    text-align: center;
+    line-height: 60px;
+}
+
+
+#list li a:link{
+    background: #CDFEAA;
+}
+
+#list li a:visited{
+    background: red;
+}
+
+#list li a:hover{
+    background: antiquewhite;
+}
+
+#list li a:active{
+    background: yellow;
+}
+
+#container{
+    clear: left;
+    width: 100%;
+    border: 1px gray solid;
+    line-height: 150%;
+}
+
+#title,#footer {
+    background-color: gray;
+    padding: 0.5rem;
+    color: white;
+    font: 24px "Trebuchet MS";
+    clear: left;
+}
+
+#left{
+    float: left;
+    width: 160px;
+    margin: 0;
+    border-right: 1px gray solid;
+}
+#right{
+    margin-left: 190px;
+}

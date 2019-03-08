@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            border: 1px black solid;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        div#div2 {
+            transform: rotate(45deg);
+        }
+
+        div#div3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#div4 {
+            transform: translate(50px, 100px);
+        }
+
+        div#div5 {
+            transform: scale(1.2, 1.2) translate(37px, 0px);
+        }
+
+        div#div6 {
+            transition: width 2s, height 2s, transform 2s;
+        }
+
+        div#div6:hover {
+            transform: translate(37px, 0px);
+        }
+
+        @keyframes my {
+            from {
+                background-color: yellow
+            }
+            to {
+                background-color: red;
+            }
+        }
+
+        @keyframes hh {
+            0%{
+                background: yellow;
+            }
+            25%{
+                background-color: red;
+            }
+            50%{
+                background-color: white;
+            }
+            100%{
+                background-color: yellow;
+            }
+        }
+
+        div#div7:hover {
+            animation: hh 5s;
+        }
+
+        div#div8{
+            width: auto;
+            columns: 3;
+        }
+
+
+        #div_display {
+            width: 500px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #div_display span {
+            background-color: white;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div>
+    你好。这是一个 div 元素。
+</div>
+
+<div id="div2">
+    你好。这是一个 div 元素。
+</div>
+<div id="div3">
+    你好。。
+</div>
+<div id="div4">你好。这是一个 div 元素。</div>
+
+<div id="div5">你好。这是一个 div 元素。</div>
+
+<div id="div6">你好。这是一个 div 元素。</div>
+
+<div id="div7">你好。这是一个 div 元素。</div>
+
+
+<div id="div_display">
+
+    <span>这是一</span>
+    <span>这是一</span>
+    <span>这</span>
+
+    <span>这是一</span>
+    <span>这是一这是一</span>
+
+    <span>这是一</span>
+    <span>这</span>
+    <span>这是一</span>
+    <span>这</span>
+
+    <span>这是一</span>
+    <span>这是一这是一</span>
+    <span>这是一</span>
+    <span>这是一这是一</span>
+</div>
+
+
+<div id="div8">
+
+    <div>
+        这是一这是一这是一这是一这是一这是一这是一这是一
+    </div>
+
+    <div>
+        这是一这是一这是一这是一这是一这是一这是一这是一
+    </div>
+    <div>
+        这是一这是一这是一这是一这是一这是一这是一这是一
+    </div>
+
+</div>
+
+</body>
+</html>

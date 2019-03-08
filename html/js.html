@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+
+        #btn {
+            width: 120px;
+            height: 60px;
+            background-color: #BAE498;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="../js/dom.js"></script>
+    <script>
+
+        function sayHello() {
+            alert('Hello')
+        }
+
+        console.log(typeof $)
+
+
+        // function Student() {
+        //     this.name = 'Robot';
+        //     this.height = 1.6;
+        //     this.runa = function () {
+        //         console.log(this.name + 'is running!')
+        //     };
+        //     this.sayHello = function () {
+        //         alert('Hello' + this.name + '!')
+        //     }
+        // }
+        //
+        // Student.prototype.sayBye = function () {
+        //     alert("Byebye" + this.name + "!")
+        // };
+        //
+        // var xiaoming = new Student();
+        // xiaoming.sayHello();
+        // xiaoming.runa();
+        // xiaoming.sayBye();
+        // console.log($===jQuery);
+    </script>
+</head>
+<body>
+<div id="btn" onclick="sayHello()"></div>
+
+<script>
+    document.getElementById("btn").style.backgroundColor="#e44c5f"
+</script>
+</body>
+</html>

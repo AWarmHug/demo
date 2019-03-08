@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bor{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        .par{
+            width: 200px;
+            height: 200px;
+            background: #437A16;
+            position: absolute;
+            top: 50px;
+        }
+
+        .test {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            background: greenyellow;
+        }
+        #t:before{
+            content: " ";
+            background: url("../img/a.jpg") 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="bor">
+
+</div>
+
+<div class="par">
+    <div class="test"/>
+</div>
+
+
+<span id="t">哈哈哈哈</span>
+
+</body>
+</html>

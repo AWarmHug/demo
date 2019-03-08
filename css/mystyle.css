@@ -1,0 +1,14 @@
+#div1 {
+    background-color: beige;
+    width: 50%;
+    height: 100px
+}
+.text{
+    background-color: burlywood;
+    font-size: 20px;
+}
+#div_text span{
+    background-color: crimson;
+    font-size: 20px;
+    color: beige;
+}
