@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover">
+    <title>零点阅读</title>
+    <script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + 'px'
+        window.onresize = function () {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + 'px'
+        }
+    </script>
+
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cleanfix {
+            clear: both;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+
+        .list {
+            width: 15rem;
+            margin: 0 auto;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        .list li {
+            width: 100%;
+            height: 5rem;
+            margin-top: 0.5rem;
+        }
+
+        .cover {
+            width: 4rem;
+            height: 5rem;
+            display: inline-block;
+            float: left;
+        }
+
+        .info {
+            box-sizing: border-box;
+            margin-left: 0.5rem;
+            width: 10.5rem;
+            height: 100%;
+            float: left;
+        }
+
+        .title {
+            color: #333333;
+            font-size: 0.8rem;
+            line-height: 1.2rem;
+            height: 1.2rem;
+        }
+
+        .author {
+            overflow: hidden;
+            padding: 0.4rem 0;
+        }
+
+        .author .ic-header {
+            background: url("http://www.lingdianyuedu.cn/huodong/images/ren.jpg");
+            background-size: 100% 100%;
+            display: inline-block;
+            width: 0.5rem;
+            height: 0.6rem;
+            float: left;
+        }
+
+        .author .name {
+            color: #666666;
+            font-size: 0.5rem;
+            line-height: 0.5rem;
+            float: left;
+        }
+
+        .type {
+            color: #e4e14d;
+            border: #e4e14d 0.05rem solid;
+            border-radius: 0.1rem;
+            padding: 0 0.2rem;
+            line-height: 0.6rem;
+            font-size: 0.5rem;
+            float: right;
+            margin-right: 0.2rem;
+        }
+
+        .word-count {
+            color: #5c4274;
+            border: #5c4274 0.05rem solid;
+            border-radius: 0.1rem;
+            padding: 0 0.2rem;
+            font-size: 0.5rem;
+            line-height: 0.6rem;
+            float: right;
+        }
+
+        .desc {
+            color: #666666;
+            font-size: 0.65rem;
+            text-overflow: clip;
+            word-break: break-word;
+            text-align: justify;
+            line-height: 1.0rem;
+            height: 2rem;
+            overflow: hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <ul class="list">
+
+
+    </ul>
+</div>
+
+<script>
+    var xmlhttpl = new XMLHttpRequest()
+    xmlhttpl.onreadystatechange = function () {
+        if (xmlhttpl.readyState === 4 && xmlhttpl.status === 200) {
+
+            let data = JSON.parse(xmlhttpl.responseText)
+            if (data.status === '_0000') {
+                let html='';
+                //请求成功
+                let bookbc = data.bookbc
+                data.bookbc.forEach((value) => {
+                    html+='<li id="'+value.ibkid+'">'
+                    html+='<img class="cover" src="'+value.cbkcover+'">'
+                    html+='<div class="info">'
+                    html+='<h5 class="title">'+value.cbkname+'</h5>'
+                    html+='<div class="author">'
+                    html+='<span class="ic-header"></span>'
+                    html+='<span class="name">'+value.cbkauthor+'</span>'
+                    html+='<span class="word-count">'+value.ibksize+'</span>'
+                    html+='<span class="type">'+value.cbkclassaname+'</span>'
+                    html+='</div>'
+                    html+='<p class="desc">'+value.cbkintro+'</p>'
+                    html+='</div>'
+                    html+='</li>'
+                })
+
+                let list = document.getElementsByClassName('list')[0]
+
+                list.innerHTML=html
+            }
+
+
+            console.log(data.message)
+        }
+    }
+
+    xmlhttpl.open('GET', 'http://www.shnongc.cn/zf/citybookhtml.php?type=99&itype=4')
+    xmlhttpl.send()
+
+</script>
+
+</body>
+</html>
